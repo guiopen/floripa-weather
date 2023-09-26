@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima em Floripa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #27bef6;
+        }
+
+        .sun {
+            width: 610px;
+            height: 610px;
+            background-color: #fdd43f;
+            border-radius: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #2c2c2c;
+            text-shadow: 2px 2px 4px rgba(100, 100, 100, 0.75); /* Add a shadow for the text */
+            margin: 20px;
+        }
+
+        h1 {
+            color: #2c2c2c; /* Header text color */
+            text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.85); /* Add a shadow for the text */
+            font-size: 35px;
+        }
+            /* Reduce font size for titles */
+            .sun h2 {
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Previsão do tempo em Florianópolis</h1>
+
+    <div class="sun">
+        <h2>Temperatura para as próximas 12 horas</h2>
+        <p id="total-temperatures">Carregando...</p>
+        <p id="mean-temperature">Carregando...</p>
+        
+        <h2>Vento para as próximas 24 horas</h2>
+        <p id="wind">Carregando...</p>
+    </div>
+
+    <script>
+        // Fetch temperature data
+        fetch("/temps")
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("mean-temperature").textContent = `Temperatura média: ${data.mean_temps}°C`;
+                document.getElementById("total-temperatures").textContent = `De 3 em 3 horas: ${data.total_temps.join("°C, ")}°C`;
+            });
+
+        // Fetch wind data
+        fetch("/wind")
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("wind").textContent = `Velocidade média do vento: ${data} km/h`;
+            });
+    </script>
+</body>
+</html>
