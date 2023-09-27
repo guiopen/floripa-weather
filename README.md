@@ -12,3 +12,7 @@ A small api + frontend that displays the temperature and wind speed of Florianó
 
 
 ### Documentation:
+The program is divided in three parts: the **CityWeather** class responsible for the OpenWeather api consumption and program logic, the main file **floripa_weather_api.py** responable for creating the api and starting the server and the **frontend.py** file that is responsable for consuming the **floripa_weather_api.py** and display information in a not-so-bad interface.
+
+The **CityWeather** class receive the city name and the api key as mandatory parameters
+
