@@ -12,7 +12,7 @@ app = Flask(__name__)
 def temps() -> dict:
     return jsonify(floripa.get_temperatures(4)) #example output: {"mean_temps":17.1,"total_temps":[17.6,17.3,16.9,16.6]}
 
-#the second route returns the avarage wind for the next 24 hours in kilometers per hour
+#the second route returns the average wind for the next 24 hours in kilometers per hour
 @app.route('/wind')
 def wind() -> str:
     return jsonify(floripa.get_wind(24)) #example output: "2.7"
