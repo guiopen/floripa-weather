@@ -1,5 +1,5 @@
 # floripa-weather
-A small api + frontend that displays the temperature and wind speed of Florianópolis. This project was created for a technical challenge for internship. Below is a step-by-step of how you can run it along with the project documentation.
+A small api + frontend that displays the temperature and wind speed of Florianópolis. This project was created as a technical challenge for internship. Below are the step-by-step instructions to run it along with the project documentation.
 
 ### How to run
 1 - Install the necessary python modules **flask** and **requests**, you can install them with 'pip install flask' and 'pip install requests'
