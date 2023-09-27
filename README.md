@@ -8,7 +8,7 @@ A small api + frontend that displays the temperature and wind speed of Florianó
 
 3 - Execute the file '**floripa_weather_api.py**' with the command 'python3 floripa_weather_api.py', this will run the the website on your local machine.
 
-4 - To access the website, open your browser and enter this adress on the search bar: **http://127.0.0.1:5000**
+4 - To access the website, open your browser and enter this address on the search bar: **http://127.0.0.1:5000**
 
 
 ![floripa_weather](https://github.com/guiopen/floripa-weather/assets/94094527/7a05f2da-3d2e-49fd-9fd3-192a524da0f6)
