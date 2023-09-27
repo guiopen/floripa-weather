@@ -11,14 +11,13 @@ class CityWeather:
             self.__api_key = api_key
         else:
             raise ValueError('api_key parameter must be a string')
-        self.__unit = 'metric'
         self.__full_data = self.get_openweather_data()
     
     #consume openweather api to get complete weather data for the next 5 days
     def get_openweather_data(self) -> dict:
         url = 'https://openweather43.p.rapidapi.com/forecast'
         appid = 'da0f9c8d90bde7e619c3ec47766a42f4'
-        querystring = {'q':self.__city,'appid':appid,'units':self.__unit}
+        querystring = {'q':self.__city,'appid':appid,'units':'metric'}
         headers = {'X-RapidAPI-Key': self.__api_key, 'X-RapidAPI-Host': 'openweather43.p.rapidapi.com'}
         return requests.get(url, headers=headers, params=querystring).json()
 
@@ -58,10 +57,6 @@ class CityWeather:
     def api_key(self, api_key) -> None:
         if isinstance(api_key, str):
             self.__api_key = api_key
-
-    @property
-    def unit(self) -> str:
-        return self.__unit
        
     @property
     def full_data(self) -> dict:
