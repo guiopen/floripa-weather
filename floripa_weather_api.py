@@ -3,7 +3,7 @@ from flask import Flask, jsonify, render_template
 
 
 #create an instace that contains floripa weather, dont forget to put your api key below
-api_key = '<INSERT YOUR API KEY HERE>'
+api_key = 'INSERT YOUR API KEY HERE'
 floripa = CityWeather('Florianopolis', api_key)
 app = Flask(__name__)
 
