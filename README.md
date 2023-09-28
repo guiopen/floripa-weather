@@ -6,7 +6,7 @@ A small api + frontend that displays the temperature and wind speed of Florianó
 
 2 - Download this repository, open the file **floripa_weather_api.py** and put your api key in the **api_key** variable, replacing the field **'INSERT YOUR API KEY HERE'**. You can get your key from: https://rapidapi.com/KirylBokiy/api/openweather43/
 
-3 - Execute the file '**floripa_weather_api.py**' with the command 'python3 floripa_weather_api.py', this will run the the website on your local machine.
+3 - Execute the file '**floripa_weather_api.py**' with the command 'python3 floripa_weather_api.py', this will run the website on your local machine.
 
 4 - To access the website, open your browser and enter this address on the search bar: **http://127.0.0.1:5000**
 
