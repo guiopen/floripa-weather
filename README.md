@@ -15,7 +15,7 @@ A small api + frontend that displays the temperature and wind speed of Florianó
 
 
 ### Documentation:
-The program is divided in three parts: the **CityWeather** class responsible for the OpenWeather api consumption and program logic, the main file **floripa_weather_api.py** responsible for creating the api and starting the server and the **frontend.py** file that is responsible for consuming the **floripa_weather_api.py** and display information in a not-so-bad interface. 
+The program is divided in three parts: the **CityWeather** class responsible for the OpenWeather api consumption and program logic, the main file **floripa_weather_api.py** responsible for creating the api and starting the server and the **frontend.py** file that is responsible for consuming the **floripa_weather_api.py** and display information on a web interface. 
 
 #### Program Logic
 The **CityWeather** class receives the city name and the api key as mandatory parameters and attributes, it also has a self.__full_data attribute that contains complete weather data, obtained with the **get_openweather_data()** method, which consumes the OpenWeather api and returns a dictionary with extensive weather info for the next five days, measured every 3 hours and doesnt need any parameters. There are two more important methods, **get_temperatures()** receives an integer X as a mandatory parameter and returns a dictionary with the same amount of temperatures as X and their mean, in celsius. The other method is **get_wind()** that receives a Y amount of hours as mandatory parameters and a speed unit (mps or kmh) as an optional parameter, it will return a string with the average wind of the next Y hours.
